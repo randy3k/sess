@@ -2,13 +2,7 @@
 Message <- R6::R6Class("Message",
     public = list(
         jsonrpc = "2.0",
-        to_json = function() {
-        },
-        format = function() {
-            json <- self$to_json()
-            paste0("Content-Length: ", nchar(json, type = "bytes"),
-                   "\r\n\r\n", json)
-        }
+        to_json = NULL
     )
 )
 
